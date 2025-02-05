@@ -10,18 +10,32 @@
 <body>
     <div class="container">
         <h1>It's a done deal 🤝🥰</h1>
-        <div class="heart">❤️</div>
-        <h4>Let's decide things on Text.</h4>
-        <h4>click below buttons to start messaging</h4>
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTRjbGd2dnRudHJoZmRlMzM2bDVvaXFtNTRtcWNhejhkZTJkMWJ1dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/fEKPyuq2MVXKbCqGTw/giphy.gif">
+        <span><img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOW5vaDVkNmY3YWg4eG14ZmMzeG9sZ2w1YnA0YjVkZHoxN3lqNWNxYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Vw7tfG3bYJNtqogIaV/giphy.gif" style="height: 200px;"></span>
+        <h3>Let's decide things on Text.</h3>
+        <h3>click below buttons to start messaging</h3>
         <div class="link">
 
             <a href="https://wa.me/+919370981050" > <img id="wp" src="whatsapp-logo-black (Medium).png" style="height: 50px;" ></a>
             <b><span style="padding: 20px;">or</span></b>
             <a href="https://ig.me/m/prathamesh_n27"><img src="instagram-icon.png" style="height: 30px;"></a>
             </div>
+            <button onclick="launchConfetti()">Celebrate!</button>
 
         <!-- <button class="back-btn" onclick="window.history.back()">Back</button> -->
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.min.js"></script>
+
+    <script>
+  function launchConfetti() {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+  }
+  </script>
   <script>
         $(document).ready(function() {
             $('.container').hide().fadeIn(1000);
