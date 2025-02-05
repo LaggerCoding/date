@@ -11,16 +11,31 @@
     <div class="container">
         <h1>It's a done deal 🤝🥰</h1>
         <div class="heart">❤️</div>
+        <h4>Let's decide things on Text.</h4>
+        <h4>click below buttons to start messaging</h4>
         <div class="link">
 
             <a href="https://wa.me/+919370981050" > <img id="wp" src="whatsapp-logo-black (Medium).png" style="height: 50px;" ></a>
             <b><span style="padding: 20px;">or</span></b>
             <a href="https://ig.me/m/prathamesh_n27"><img src="instagram-icon.png" style="height: 30px;"></a>
             </div>
+            <button onclick="launchConfetti()">Celebrate!</button>
+
         <!-- <button class="back-btn" onclick="window.history.back()">Back</button> -->
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.min.js"></script>
+
     <script>
+  function launchConfetti() {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+  }
+  </script>
+  <script>
         $(document).ready(function() {
             $('.container').hide().fadeIn(1000);
         });
