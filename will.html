@@ -10,7 +10,7 @@
       height: 100vh;
       margin: 0;
     }
-    #btn {
+    button {
       border: none;
       border-radius: 8px;
       font-size: 16px;
@@ -18,34 +18,29 @@
       cursor: pointer;
       transition: all 0.2s ease;
     }
-    #name{
-      width: 200px;
-      height: 20px;
-      box-shadow: 2px 2px 5px black;
-    }
      </style>
 </head>
 <body>
-<form action="available.php" method="post">
-
-  <div class="container">
-    <h1>Enter Your Name!</h1>
-    <input type="text" name="name" id="name">
-    <br>
-    <div class="button">
-      <input type="submit" value="Let's GO!" id="btn"  onclick="window.location.href='available.php'" >
+    <div class="container">
+        <h1>Well then</h1>
+        <h1>Will you go on a date with me?</h1>
+        <div class="buttons">
+            <button id="yesBtn" onclick="window.location.href='yes.html'" onmouseover="Increase()">Yes</button>
+            <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">No</button>
+        </div>
     </div>
-  </div>
-</form>
-<script src="jquery.js"></script>
-  <script>
-      $(document).ready(function(){
-          $('#name').focus()
-          $('#name').css("background-color" , "yellow")
-        })
-        $(document).ready(function(){
-          $('#btn').css("margin" , "20px")
-        })
+    <script src="jquery.js"></script>
+    <script>
+//         function Increase(){
+//         const button = document.getElementById('yesBtn');
+//         let size = 20; // Initial font size in pixels
+
+//     button.addEventListener('mouseenter',function(){
+//       size += 4; // Increase the size by 4 pixels
+//       button.style.fontSize = '${size}px'
+//       button.style.padding = '${size / 4}px ${size / 2}px';
+//     })
+// }
         function moveButton() {
             const btn = document.getElementById('noBtn');
             const x = Math.random() * (window.innerWidth - btn.offsetWidth);
