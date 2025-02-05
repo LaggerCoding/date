@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+     <style>
+        body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #btn {
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    #name{
+      width: 200px;
+      height: 20px;
+      box-shadow: 2px 2px 5px black;
+    }
+     </style>
+</head>
+<body>
+<form action="available.php" method="post">
+
+  <div class="container">
+    <h1>Enter Your Name!</h1>
+    <input type="text" name="name" id="name">
+    <br>
+    <div class="button">
+      <input type="submit" value="Let's GO!" id="btn"  onclick="window.location.href='available.php'" >
+    </div>
+  </div>
+</form>
+<script src="jquery.js"></script>
+  <script>
+      $(document).ready(function(){
+          $('#name').focus()
+          $('#name').css("background-color" , "yellow")
+        })
+        $(document).ready(function(){
+          $('#btn').css("margin" , "20px")
+        })
+        function moveButton() {
+            const btn = document.getElementById('noBtn');
+            const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+            btn.style.position = 'absolute';
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+
+
+        $(document).ready(function () {
+      let size = 16; // Initial font size in pixels
+
+      $('#yesBtn').mouseenter(function () {
+        size += 4; // Increase the size by 4 pixels
+        $(this).css({
+          fontSize: `${size}px`,
+          padding: `${size / 4}px ${size / 2}px`
+        });
+      });
+    });
+    </script>
+</body>
+</html>
